@@ -11,7 +11,7 @@ const envSchema = Joi.object()
       .valid("development", "production", "test")
       .required(),
     DOCKER_PORT: Joi.number().required(),
-    APPLICATION_PORT: Joi.number().required(),
+    APPLICATION_PORT: Joi.number(),
 
     ACCESS_TOKEN_SECRET: Joi.string().required(),
     ACCESS_TOKEN_EXP: Joi.string().required(),
