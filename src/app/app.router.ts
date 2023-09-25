@@ -12,7 +12,6 @@ appRouter.use("/user", userRouter)
 appRouter.use("/project", projectRouter)
 
 appRouter.get("/health", (_: Request, res: Response) => {
-  console.log(config)
   res.status(HttpStatus.OK).json({
     message: "App up",
     version: "1.0",

@@ -39,7 +39,6 @@ export class ControlBuilder {
     return this
   }
   handle() {
-    console.log(this.handler, this.schema, this.options)
     return new ControllerHandler().handle(
       this.handler,
       this.schema,

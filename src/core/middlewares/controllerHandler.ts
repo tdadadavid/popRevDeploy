@@ -17,7 +17,6 @@ export class ControllerHandler {
     options?: ControllerHandlerOptions,
   ): ExpressCallbackFunction => {
     return async (req: Request, res: Response, next: NextFunction) => {
-      console.log(options)
       try {
         if (options?.isPrivate) {
           await this.validateRequest(req, options)
