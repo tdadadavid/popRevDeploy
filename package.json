@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start:dev": "npx nodemon",
-    "build": "npm run install:typescript && tsc",
+    "build": "tsc",
     "start:prod": "node ./build/index.js",
     "save:devdependencies": "heroku config:set NPM_CONFIG_PRODUCTION=false"
   },
