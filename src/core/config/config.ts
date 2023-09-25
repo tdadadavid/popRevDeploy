@@ -11,7 +11,7 @@ const envSchema = Joi.object()
       .valid("development", "production", "test")
       .required(),
     DOCKER_PORT: Joi.number().required(),
-    APPLICATION_PORT: Joi.number(),
+    PORT: Joi.number(),
 
     ACCESS_TOKEN_SECRET: Joi.string().required(),
     ACCESS_TOKEN_EXP: Joi.string().required(),
@@ -38,7 +38,7 @@ if (validationError) {
 }
 
 export const config = Object.freeze({
-  port: validatedEnvVars.APPLICATION_PORT,
+  port: validatedEnvVars.PORT,
   appEnvironment: validatedEnvVars.NODE_ENV,
   auth: {
     accessTokenSecret: validatedEnvVars.ACCESS_TOKEN_SECRET,
