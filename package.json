@@ -8,6 +8,7 @@
     "start:dev": "npx nodemon",
     "build": "npm run setup:yarn && npm run install:typescript && tsc",
     "start:prod": "node ./build/index.js",
+    "save:devdependencies": "heroku config:set NPM_CONFIG_PRODUCTION=false",
     "setup:yarn": "npm i yarn",
     "install:typescript": "yarn add typescript --dev"
   },

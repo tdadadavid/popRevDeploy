@@ -21,6 +21,7 @@ export interface ValidationSchema {
 export type Roles = "USER" | "ARTIST" | "ADMIN"
 
 export interface ControllerHandlerOptions {
+  isPublic?: boolean
   isPrivate: boolean
   allowedRoles?: Roles[]
 }
