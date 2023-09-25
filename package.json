@@ -7,7 +7,7 @@
     "test": "jest",
     "start:dev": "npx nodemon",
     "build": "tsc",
-    "start:prod": "node ./build/index.js",
+    "start:prod": "npm run build && node ./build/index.js",
     "save:devdependencies": "heroku config:set NPM_CONFIG_PRODUCTION=false"
   },
   "keywords": [],
